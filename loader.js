@@ -11,7 +11,7 @@ const loading = {
         loader.innerHTML = `
             <div class="loader-content">
                 <div class="spinner" aria-hidden="true"></div>
-                <img src="BrasaViva/brasatransparente.png" alt="Logo Brasa Viva: brasas vermelhas formando o nome do restaurante" class="loader-image" aria-hidden="true">
+                <img src="img/brasatransparente.png" alt="Logo Brasa Viva: brasas vermelhas formando o nome do restaurante" class="loader-image" aria-hidden="true">
             </div>
             <p class="loader-message">${message}</p>
         `;
