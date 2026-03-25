@@ -2,7 +2,7 @@
 
 Uma landing page moderna com design marcante, inspirada no conceito de calor, intensidade e energia — representando a identidade de uma marca forte e envolvente.
 
-![preview](./assets/preview.gif)
+![preview](./video/BrasaViva.mp4)
 
 ## 🛠️ Tecnologias
 
