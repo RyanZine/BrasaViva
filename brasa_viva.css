@@ -350,3 +350,47 @@ footer time {
         width: 150px;
     }
 }
+
+/* Tablets e iPads */
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+    /* 1. Header: Mantém flex, mas reduz o espaço */
+    header {
+        padding: 15px var(--gap-padrao);
+    }
+
+    .logo {
+        width: 170px;
+    }
+
+    /* 2. Hero Section: Ajuste de proporção */
+    #brasa {
+        min-height: 60vh;
+        padding: 50px;
+    }
+
+    #brasa h1 {
+        font-size: 3rem;
+    }
+
+    /* 3. Cardápio: Otimização de colunas */
+    .cardapio ul {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas fixas para tablet */
+        gap: 20px;
+    }
+
+    /* 4. Seção Sobre: Texto mais amigável */
+    .sobre {
+        padding: 50px;
+    }
+
+    .sobre p {
+        font-size: 1.1rem;
+        max-width: 100%; /* Aproveita a largura do tablet */
+    }
+
+    /* 5. Grid de Compromissos no Sobre Nós */
+    .sobre ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
