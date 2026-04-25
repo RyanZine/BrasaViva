@@ -1,240 +1,352 @@
-/* Fonte de letra */
-.cinzel-decorative-regular {
-    font-family: "Cinzel Decorative", serif;
-    font-weight: 400;
-    font-style: normal;
+:root {
+    --cor-fogo: #ff4500;       /* Laranja vibrante */
+    --cor-brasa: #e63946;      /* Vermelho brasa */
+    --cor-ouro: #ffb703;        /*Amarelo*/
+    --cor-carvao: #141414;     /* Cinza quase preto para o fundo */
+    --cor-cinza-fumaça: #2b2b2b; /* Para cards e seções */
+    --cor-texto-claro: #f5f5f5;  /* Branco gelo para leitura */
+    --cor-madeira: #633d1c;     /* Marrom para detalhes*/
+    --cor-madeira-escuro: #3d2612; /* Marrom escuro para sombra */
+    --gap-padrao: 20px;
+    --transicao-suave: all 0.3s ease;
 }
 
-.cinzel-decorative-bold {
-    font-family: "Cinzel Decorative", serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.cinzel-decorative-black {
-    font-family: "Cinzel Decorative", serif;
-    font-weight: 900;
-    font-style: normal;
-}
-
-body {
-    margin: 10px;
-    padding: 12px;
-    box-sizing: border-box;
-    font-family: 'Cinzel Decorative', serif;
-    background-image: url("img/background2.jpg");
-    /*fundo de fogo*/
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: auto;
-    width: auto;
-    background-position: center;
-    background-color: black;
-    text-decoration: none;
-    color: #ffe5b4;
-}
-
-/* Header */
-header {
-    text-align: center;
-    border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-/* Menu */
-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 0 10px;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    margin: 0 15px;
-}
-
-a:hover {
-    color: #ffae0d;
-    transition: all 0.3s ease;
-}
-
-h1 {
-    color: #ff6600;
-    font-size: 65px;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h2 {
-    color: #ff6600;
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-h3 {
-    color: #ffae0d;
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-h4 {
-    color: #ffcc66;
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 20px;
+/*desktop first*/
+body {
+    background-color: var(--cor-carvao);
+    color: var(--cor-texto-claro);
     line-height: 1.6;
+    padding: var(--gap-padrao);
+    transition: var(--transicao-suave);
 }
 
-.titulo {
-    font-weight: bold;
-    font-size: 28px;
-    margin-bottom: 5px;
-    color: #ffc340;
+/*header*/
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--gap-padrao);
+    background-color: var(--cor-cinza-fumaça);
+    border-radius: 10px;
+    margin-bottom: var(--gap-padrao);
 }
 
-.sub {
-    font-size: 16px;
-    color: #ffd970;
-}
-
-section {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 15px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-}
-
-.brasa {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.brasa h1 {
-    text-align: center;
-}
-
-img {
-    border-radius: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 200px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-img:hover {
-    transform: scale(1.2);
-    box-shadow: 0 8px 20px rgba(255, 165, 0, 0.6);
-}
-
+/*logo*/
 .logo {
     width: 200px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 15px;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    margin-top: 20px;
-}
-
-div {
-    border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-.pratos {
-    text-align: right;
-}
-
-.acompanhamentos {
-    text-align: center;
-}
-
-.sanduíches {
-    text-align: right;
-}
-
-.bebidas {
-    text-align: left;
-}
-
-/* Layout para itens do cardápio com preço à direita */
-.menu-item {
+/*menu*/
+.menu {
     display: flex;
-    justify-content: space-between;
+    gap: var(--gap-padrao);
+}
+
+header a {
+    color: var(--cor-ouro);
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transicao-suave);
+}
+
+header a:hover {
+    color: var(--cor-fogo);
+}
+
+/*call to action*/
+.btn-cta {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 18px 40px;
+    background-color: var(--cor-madeira);
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-radius: 50px;
+    border: 2px solid var(--cor-fogo);
+    transition: var(--transicao-suave);
+    box-shadow: 0 14px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-cta:hover {
+    background-color: var(--cor-fogo);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--cor-brasa);
+    border-color: var(--cor-ouro);
+}
+
+#brasa {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 12px;
+    justify-content: center;
+    text-align: center;
+    min-height: 90vh;
+    padding: 60px 20px;
+    border-radius: 15px;
+    margin-bottom: var(--gap-padrao);
+    background: linear-gradient( to bottom, rgba(20, 20, 20, 0.8),
+    var(--cor-madeira-escuro)),
+    url('img/churrasco.jpg') no-repeat center center/cover;
 }
 
-.menu-desc {
-    flex: 1 1 auto;
+h1{
+    font-size: 3.5rem;
+    color: var(--cor-fogo);
+    margin-bottom: var(--gap-padrao);
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
-.menu-price {
-    flex: 0 0 auto;
-    color: #ffd970;
-    font-weight: 700;
-    font-size: 20px;
-    white-space: nowrap;
+#brasa p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: var(--gap-padrao);
+}
+
+/*cardapio*/
+.cardapio {
+    padding: 60px var(--gap-padrao);
+    background-color: var(--cor-carvao);
+}
+
+.cardapio h3, h4 {
+    color: var(--cor-fogo);
+    text-transform: uppercase;
+    margin: 30px 0 15px 0;
+    border-left: 5px solid var(--cor-madeira);
+    padding-left: 15px;
+}
+
+.cardapio ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.cardapio li {
+    background-color: var(--cor-cinza-fumaça);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transicao-suave);
+}
+
+.cardapio li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-color: var(--cor-madeira);
+}
+
+.cardapio img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-item {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.titulo {
+    color: var(--cor-ouro);
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
 .descricao {
-    margin: 0;
-    color: #ffe5b4;
-    font-size: 18px;
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    line-height: 1.4;
 }
 
-@media (max-width: 600px) {
-    .menu-item {
+.menu-price {
+    font-size: 1.4rem;
+    color: var(--cor-fogo);
+    font-weight: 800;
+    margin-top: auto;
+}
+
+/*sobre nós*/
+.sobre {
+    padding: 80px var(--gap-padrao);
+    background-color: var(--cor-cinza-fumaça);
+    border-radius: 15px;
+    margin: 40px 0;
+    border-left: 8px solid var(--cor-madeira);
+}
+
+.sobre h1 {
+    color: var(--cor-fogo);
+    font-size: 3rem;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.sobre h2 {
+    color: var(--cor-brasa);
+    margin: 40px 0 20px 0;
+    text-transform: uppercase;
+}
+
+.sobre p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--cor-texto-claro);
+    margin-bottom: 20px;
+    max-width: 900px;
+}
+
+.sobre ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.sobre li {
+    background-color: var(--cor-carvao);
+    padding: 20px;
+    border-radius: 8px;
+    border-bottom: 3px solid var(--cor-brasa);
+    transition: var(--transicao-suave);
+}
+
+.sobre li:hover {
+    background-color: var(--cor-ouro);
+}
+
+.sobre li strong {
+    color: var(--cor-fogo);
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Seção de Contato */
+.contato {
+    padding: 60px var(--gap-padrao);
+    text-align: center;
+    background: linear-gradient(to bottom, var(--carvao), var(--cor-madeira-escuro));
+    border-top: 2px solid var(--cor-madeira);
+}
+
+.contato h1 {
+    color: var(--cor-fogo);
+    margin-bottom: 20px;
+}
+
+.contato p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--cor-texto-claro);
+}
+
+/* Footer (O Toque Final) */
+footer {
+    background-color: var(--cor-carvao);
+    padding: 40px var(--gap-padrao);
+    text-align: center;
+    border-top: 1px solid var(--cor-cinza-fumaça);
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+/* Destaque para o Desenvolvedor (Doutrina Guanabara: Valorize seu trabalho!) */
+footer p:last-child {
+    color: var(--cor-ouro);
+    font-weight: bold;
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+footer time {
+    color: var(--cor-fogo);
+    font-weight: bold;
+}
+
+/*Mobile*/
+@media (max-width: 768px) {
+    
+    /* 1. Ajuste no Header: Coloca o menu embaixo da logo */
+    header {
         flex-direction: column;
-        align-items: flex-start;
+        gap: var(--gap-padrao);
+        text-align: center;
     }
 
-    .menu-price {
-        margin-top: 6px;
+    .menu nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* 2. Hero Section: Diminui o texto para não transbordar */
+    #brasa h1 {
+        font-size: 2.2rem;
+    }
+
+    #brasa p {
+        font-size: 1rem;
+    }
+
+    /* 3. Cardápio: Garante que as imagens e textos caibam */
+    .cardapio ul {
+        grid-template-columns: 1fr; /* Força 1 coluna no celular */
+        padding: 0 10px;
+    }
+
+    .cardapio li {
+        max-width: 100%;
+    }
+
+    .cardapio img {
+        height: 180px; /* Imagem um pouco menor no mobile */
+    }
+
+    /* 4. Sobre Nós: Ajusta o grid de compromissos */
+    .sobre ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .sobre h1 {
+        font-size: 2.2rem;
     }
 }
 
-/* Em seções que estão alinhadas à direita, mostrar o preço à esquerda */
-.pratos .menu-item,
-.sanduíches .menu-item {
-    flex-direction: row-reverse;
-}
-
-.pratos .menu-desc,
-.sanduíches .menu-desc {
-    text-align: right;
-}
-
-@media (max-width: 600px) {
-
-    .pratos .menu-item,
-    .sanduíches .menu-item {
-        flex-direction: column;
-        align-items: flex-start;
+/* Ajuste fino para celulares muito pequenos (iPhone SE, etc) */
+@media (max-width: 480px) {
+    .btn-cta {
+        width: 100%;
+        padding: 15px 20px;
+        font-size: 1rem;
     }
-
-    .pratos .menu-desc,
-    .sanduíches .menu-desc {
-        text-align: left;
+    
+    .logo {
+        width: 150px;
     }
 }
