@@ -1,8 +1,18 @@
-# 🔥 BrasaViva
+<p align="center">
+  <img src="img/logo.svg" alt="Brasa Viva" width="620">
+</p>
 
-Uma landing page moderna com design marcante, inspirada no conceito de calor, intensidade e energia — representando a identidade de uma marca forte e envolvente.
+<p align="center">
+  <strong>Site institucional de restaurante especializado em grelhados</strong><br>
+  <a href="https://brasa-viva.vercel.app">Ver no ar</a>
+</p>
 
-![preview](./video/BrasaViva.gif)
+---
+
+Landing page com design marcante, construída em torno do conceito de calor e
+brasa — a identidade visual carrega a marca do começo ao fim.
+
+![Demonstração do site Brasa Viva](./video/BrasaViva.gif)
 
 ## 🛠️ Tecnologias
 
